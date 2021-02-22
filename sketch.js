@@ -45,7 +45,9 @@ function draw() {
   stroke("#FFFFFF")
   push();
   translate(x + velX, y + velY);
-  rotate(atan(movement.valX/movement.valY))
+  if(movement.valY>0)scale(1.0,-1.0); 
+  if(movement.valX<0)scale(-1.0,1.0); 
+  rotate(atan(movement.valY/movement.valX))
   image(gif, -gif.width/2, -gif.height/2);
   pop();
   gif.play();

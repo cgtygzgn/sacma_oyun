@@ -17,7 +17,7 @@ function setup() {
   // The last four optional arguments define minimum and maximum values 
   // for the x and y axes; minX, maxX, minY, maxY
   // The default min and max values for all four are -1 and 1.
-  movement = createJoystick("Joystick", 10*windowWidth/400, 150*windowWidth/400, 100*windowHeight/400, 100*windowHeight/400, 0, 1, 1, 0);
+  movement = createJoystick("Joystick", 10*windowWidth/400, 150*windowWidth/400, 100*windowHeight/400, 100*windowHeight/400, -1, 1, 1, -1);
   //looking = createJoystick("Joystick", 200*windowWidth/400, 350*windowWidth/400, 100*windowHeight/400, 100*windowHeight/400, -1, 1, 1, -1);
   // Starting position and velocity
   x     = 300;
@@ -37,8 +37,8 @@ function draw() {
   }
   
   // Use Joystick's output to change velocity
-  velX += (movement.valX-0.5) * 3;
-  velY += (movement.valY-0.5) *3;  
+  velX += (movement.valX) * 3;
+  velY += (movement.valY) *3;  
   
   // Draw our ellipse
   fill("#7AA0FF");

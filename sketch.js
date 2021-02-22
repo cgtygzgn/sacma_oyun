@@ -14,7 +14,7 @@ function setup() {
   // The last four optional arguments define minimum and maximum values 
   // for the x and y axes; minX, maxX, minY, maxY
   // The default min and max values for all four are -1 and 1.
-  j = createJoystick("Joystick", 10, 210, 175, 175, -1, 1, 1, -1);
+  j = createJoystick("Joystick", 10*windowWidth/400, 150*windowWidth/400, 100*windowHeight/400, 100*windowHeight/400, -1, 1, 1, -1);
   
   // Starting position and velocity
   x     = 300;

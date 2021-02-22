@@ -7,7 +7,7 @@ let j;
 let x, y, velX, velY;
 
 function setup() {
-  createCanvas(400, 400);
+  createCanvas(windowWidth, 400);
   gui = createGui();
   
   // Create Joystick.
